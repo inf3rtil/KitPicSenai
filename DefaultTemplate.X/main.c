@@ -5,7 +5,7 @@
  * Author: Fernando Ferreira Silva 
  * Email: fernando@ninodev.com
  * Site	: https://github.com/feferreira
- * GPG key: BAC8 57299 2EDC9 54F41 3A82 5705 0051 699E 5E69D 
+ * GPG key: 2048D/CBB2DEEE 38C5 D8A1 2F13 6B92 BDCE  1478 4B4D F141 CBB2 DEEE
  ************************************************************************
  * Copyright (C) 2017,2018 Fernando Ferreira Silva
  *
