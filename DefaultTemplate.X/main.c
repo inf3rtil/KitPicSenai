@@ -1,15 +1,13 @@
 /*
  * File: main.c
  * Project: KitPicSenai
- * Version: 0.1
- * Date: 27/09/2017
  ************************************************************************
  * Author: Fernando Ferreira Silva 
  * Email: fernando@ninodev.com
  * Site	: https://github.com/feferreira
  * GPG key: BAC8 57299 2EDC9 54F41 3A82 5705 0051 699E 5E69D 
  ************************************************************************
- * Copyright (C) 2017 Fernando Ferreira Silva
+ * Copyright (C) 2017,2018 Fernando Ferreira Silva
  *
  * This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
