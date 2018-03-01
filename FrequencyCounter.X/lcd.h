@@ -25,8 +25,6 @@
 
 //comandos do lcd
 
-enum{CLEAR_LCD = 9, LIGA_LCD=6};
-inline void enable_lcd(void);
 void init_lcd(void);
 void clr_lcd(void);
 void txt_lcd(char);

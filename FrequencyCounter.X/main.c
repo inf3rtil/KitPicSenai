@@ -37,6 +37,11 @@
 
 
 void main(void) {
+    init_pic();
+    config_interrupt();
+    __delay_ms(200);
+    init_lcd();
+    lcd_texto("Frequencimetro");
     while(1){
         
     }

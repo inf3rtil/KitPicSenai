@@ -16,13 +16,8 @@
 #ifndef _SETUP
 #define _SETUP
 
-#pragma config FOSC=XT, WDTE=OFF, LVP=OFF
-#define _XTAL_FREQ 4000000
-
-enum{
-    LCD_START_ADDRESS=0x30,
-    DELAY_CMD_LCD=10    
-};
+#pragma config FOSC=HS, WDTE=OFF, LVP=OFF
+#define _XTAL_FREQ 11059200
 
 inline void init_pic(void);
 inline void config_interrupt(void);

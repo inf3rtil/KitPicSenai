@@ -29,7 +29,6 @@ inline void config_interrupt(){
     TMR0IE = 0; // timer0
     INTE = 0; // RB0, borda configurada no INTEDG, acorda do sleep
     RBIE = 0; // PORTB
-    
     PEIE = 0; // habilita interrupção dos periféricos
     TMR1IE = 0; // Estouro do timer1
     TMR2IE = 0; // estouro do timer2
@@ -38,5 +37,5 @@ inline void config_interrupt(){
     SSPIE = 0; // spi
     TXIE = 0; //serial
     ADIE = 0; //adc finalizou a conversão
-    RCIE = 1;
+    RCIE = 1; //serial rx
 }
