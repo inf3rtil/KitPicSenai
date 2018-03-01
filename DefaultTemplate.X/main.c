@@ -25,6 +25,7 @@
  */
 #include <xc.h>
 #include <pic16f877a.h>
+#include <stdint.h>
 #include "lcd.h"
 #include "setup.h"
 #include "seg_7.h"
@@ -37,6 +38,9 @@
 
 
 void main(void) {
+    init_pic();
+    init_lcd();
+    text_lcd("testando");
     while(1){
         
     }

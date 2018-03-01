@@ -13,8 +13,9 @@
     You should have received a copy of the GNU General Public License
     along with KitPicSenai.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include "lcd.h"
 #include <xc.h>
+#include <stdint.h>
+#include "lcd.h"
 #include <pic16f877a.h>
 #include "setup.h"
 
@@ -37,44 +38,46 @@ void clr_lcd()
 	__delay_ms(500);
     LATCH = 0;
 }
-void txt_lcd(char txt){
+void char_lcd(uint8_t txt){
     LATCH = 1;
 	__delay_ms(10);
-	PORT = ((txt >> 4) & 0x0F);
+	PORT = (uint8_t)((txt >> 4) & 0x0F);
 	RS = 1;
-	enable_lcd();
-	PORT = (txt & 0x0F);
+	EN = 1;
+    __delay_us(LCD_ENABLE_TIME_US);
+    EN = 0;
+	PORT = (uint8_t)(txt & 0x0F);
 	RS = 1;
-	enable_lcd();
+	EN = 1;
+    __delay_us(LCD_ENABLE_TIME_US);
+    EN = 0;
     LATCH = 0;
 }
 
-void cmd_lcd(char cmd){
+void cmd_lcd(uint8_t cmd){
     LATCH = 1;
 	__delay_ms(10);
-	PORT = ((cmd >> 4) & 0x0F);
+	PORT = (uint8_t)((cmd >> 4) & 0x0F);
 	RS = 0;
-	enable_lcd();
-	PORT = (cmd & 0x0F);
+	EN = 1;
+    __delay_us(LCD_ENABLE_TIME_US);
+    EN = 0;
+	PORT = (uint8_t)(cmd & 0x0F);
 	RS = 0;
-	enable_lcd();
+	EN = 1;
+    __delay_us(LCD_ENABLE_TIME_US);
+    EN = 0;
     LATCH = 0;
 }
 
-inline void enable_lcd(){
-    EN = 1;
-	__delay_us(10);
-	EN = 0;
-}
-
-void lcd_texto(const char *str){
+void text_lcd(const uint8_t *str){
     while(*str){
-          txt_lcd(*str);
+          char_lcd(*str);
           ++str;
          }
 }
 
-void numero_lcd(char end, char data){
-    cmd_lcd(end);
-    txt_lcd(data+LCD_START_ADDRESS);
+void number_lcd(uint8_t add, uint8_t data){
+    cmd_lcd(add);
+    char_lcd((uint8_t)(data+LCD_CHAR_OFFSET));
 }

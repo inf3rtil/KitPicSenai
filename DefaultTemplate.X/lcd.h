@@ -23,14 +23,18 @@
 #define PORT PORTD
 #define LATCH RA4
 
+enum lcd{
+    LCD_CHAR_OFFSET = 0x30,
+    LCD_ENABLE_TIME_US = 15
+};
+
 //comandos do lcd
 
-enum{CLEAR_LCD = 9, LIGA_LCD=6};
-inline void enable_lcd(void);
 void init_lcd(void);
 void clr_lcd(void);
-void txt_lcd(char);
-void cmd_lcd(char);
-void lcd_texto(const char *str);
+void char_lcd(uint8_t);
+void cmd_lcd(uint8_t);
+void text_lcd(const uint8_t *str);
+void number_lcd(uint8_t add, uint8_t data);
 
 #endif
