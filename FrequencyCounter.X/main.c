@@ -25,6 +25,7 @@
  */
 #include <xc.h>
 #include <pic16f877a.h>
+#include <stdint.h>
 #include "lcd.h"
 #include "setup.h"
 #include "seg_7.h"
@@ -35,16 +36,47 @@
 #include "usart.h"
 #include "adc.h"
 
+volatile uint16_t Rpm = 0;
+volatile uint8_t needRecalc = 0;
+
+void displayDriver(uint16_t rpm){
+    char mil, cen, dec, uni;
+    if(needRecalc){
+        mil = rpm/1000;
+        cen = (rpm%1000)/100;
+        dec = ((rpm%1000)%100)/10;
+        uni = ((rpm%1000)%100)%10;
+        number_lcd(mil, 0xC0);
+        number_lcd(cen, 0xC1);
+        number_lcd(dec, 0xC2);
+        number_lcd(uni, 0xC3);
+        text_lcd("Hz");
+        needRecalc = 0;
+    }
+    
+}
 
 void main(void) {
     init_pic();
     config_interrupt();
+    config_timer0();
+    config_timer1();
     __delay_ms(200);
     init_lcd();
-    lcd_texto("Frequencimetro");
+    text_lcd("Frequencimetro");
     while(1){
-        
+        displayDriver(Rpm);
     }
     
     return;
 }
+
+void interrupt isr(){
+    if(TMR1IE && TMR1IF){
+        TMR1IF = 0;
+        //Rpm = TMR0 * 30u;
+        Rpm = TMR0 / 2;
+        needRecalc = 1;
+        TMR0 = 0;
+    }
+} 

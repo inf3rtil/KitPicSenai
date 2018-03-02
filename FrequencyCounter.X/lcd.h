@@ -29,6 +29,7 @@ void init_lcd(void);
 void clr_lcd(void);
 void txt_lcd(char);
 void cmd_lcd(char);
-void lcd_texto(const char *str);
+void text_lcd(const char *str);
+void number_lcd(char data, char add);
 
 #endif

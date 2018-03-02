@@ -69,14 +69,14 @@ void cmd_lcd(char cmd){
     LATCH = 0;
 }
 
-void lcd_texto(const char *str){
+void text_lcd(const char *str){
     while(*str){
           txt_lcd(*str);
           ++str;
          }
 }
 
-void numero_lcd(char end, char data){
-    cmd_lcd(end);
+void number_lcd(char data, char add){
+    cmd_lcd(add);
     txt_lcd(data+0x30);
 }

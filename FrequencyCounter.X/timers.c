@@ -20,22 +20,21 @@
 
 void config_timer0(){
     TMR0 = 0; //limpa timer0
-    T0CS = 1; //incremento com oscilador ou clock externo
+    T0CS = 1; //incremento com clock externo
     T0SE = 0; //borda de subida ou descida
-    PSA = 0; //prescaler do TIMER0 ou do WDT
+    PSA = 1; //prescaler do TIMER0 ou do WDT
     PS2 = 0; //prescaler
     PS1 = 0;
     PS0 = 0;
 }
 
 void config_timer1(){
-    TMR1H = 0; //limpa timer1
-    TMR1L = 0;
+    TMR1 = 0; //limpa timer1
     T1CKPS1 = 0; //prescaler
     T1CKPS0 = 0;
-    TMR1CS = 0; //clock interno(FOSC/4) ou externo
+    TMR1CS = 1; //clock interno(FOSC/4) ou externo
     nT1SYNC = 0; //sincronizar timer1 com clock interno
-    T1OSCEN = 0; //habilita o oscilador do timer1
+    T1OSCEN = 1; //habilita o oscilador do timer1
     TMR1ON = 1; //liga timer1
 }
 
