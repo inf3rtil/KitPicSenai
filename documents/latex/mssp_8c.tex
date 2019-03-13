@@ -1,0 +1,116 @@
+\hypertarget{mssp_8c}{}\section{mssp.\+c File Reference}
+\label{mssp_8c}\index{mssp.\+c@{mssp.\+c}}
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include $<$pic16f877a.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}setup.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mssp.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mssp_8c_a678e2e2059baf3e6259855009878d6e0}{master\+\_\+spi}} ()
+\item 
+void \mbox{\hyperlink{mssp_8c_abc519c66aa9fa2e8bdc231db8f7d533f}{master\+\_\+i2c}} ()
+\item 
+char \mbox{\hyperlink{mssp_8c_a3d3dff9e1eff0628d4963e8b8ef63697}{i2c\+\_\+livre}} (void)
+\item 
+void \mbox{\hyperlink{mssp_8c_af104fa2713ad2cfe4f993bdd2ec22c46}{i2c\+\_\+start}} (void)
+\item 
+void \mbox{\hyperlink{mssp_8c_a59441171802470d8d7077b40320feef0}{i2c\+\_\+restart}} (void)
+\item 
+void \mbox{\hyperlink{mssp_8c_a1fb5085b9096e9586e7f5f455c8b7254}{i2c\+\_\+send}} (char dado)
+\item 
+char \mbox{\hyperlink{mssp_8c_af4671d67e511f5d6aaf3517e87551085}{i2c\+\_\+testa\+\_\+ack}} (void)
+\item 
+void \mbox{\hyperlink{mssp_8c_ad35d4e4f52ca74b503d5e5e1e0a3f5f3}{i2c\+\_\+stop}} (void)
+\item 
+char \mbox{\hyperlink{mssp_8c_a95b403fb0dcb6b110f0025c7415c0fd0}{i2c\+\_\+recebe}} (void)
+\item 
+void \mbox{\hyperlink{mssp_8c_a773ff838b3504f51fb54ea35a2672b87}{i2c\+\_\+ack}} (void)
+\item 
+void \mbox{\hyperlink{mssp_8c_af04221651e46a48fa65913a257089067}{i2c\+\_\+nack}} (void)
+\item 
+char \mbox{\hyperlink{mssp_8c_aaaceb2801e93832d5ea3c3d85f6ef9c5}{i2c\+\_\+escreve}} (unsigned int add, char dado)
+\item 
+char \mbox{\hyperlink{mssp_8c_a9299e6fd9049f0bb5808edcde59021d0}{i2c\+\_\+leitura}} (unsigned int add)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{mssp_8c_a773ff838b3504f51fb54ea35a2672b87}\label{mssp_8c_a773ff838b3504f51fb54ea35a2672b87}} 
+\index{mssp.\+c@{mssp.\+c}!i2c\+\_\+ack@{i2c\+\_\+ack}}
+\index{i2c\+\_\+ack@{i2c\+\_\+ack}!mssp.\+c@{mssp.\+c}}
+\subsubsection{\texorpdfstring{i2c\+\_\+ack()}{i2c\_ack()}}
+{\footnotesize\ttfamily void i2c\+\_\+ack (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mssp_8c_aaaceb2801e93832d5ea3c3d85f6ef9c5}\label{mssp_8c_aaaceb2801e93832d5ea3c3d85f6ef9c5}} 
+\index{mssp.\+c@{mssp.\+c}!i2c\+\_\+escreve@{i2c\+\_\+escreve}}
+\index{i2c\+\_\+escreve@{i2c\+\_\+escreve}!mssp.\+c@{mssp.\+c}}
+\subsubsection{\texorpdfstring{i2c\+\_\+escreve()}{i2c\_escreve()}}
+{\footnotesize\ttfamily char i2c\+\_\+escreve (\begin{DoxyParamCaption}\item[{unsigned int}]{add,  }\item[{char}]{dado }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mssp_8c_a9299e6fd9049f0bb5808edcde59021d0}\label{mssp_8c_a9299e6fd9049f0bb5808edcde59021d0}} 
+\index{mssp.\+c@{mssp.\+c}!i2c\+\_\+leitura@{i2c\+\_\+leitura}}
+\index{i2c\+\_\+leitura@{i2c\+\_\+leitura}!mssp.\+c@{mssp.\+c}}
+\subsubsection{\texorpdfstring{i2c\+\_\+leitura()}{i2c\_leitura()}}
+{\footnotesize\ttfamily char i2c\+\_\+leitura (\begin{DoxyParamCaption}\item[{unsigned int}]{add }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mssp_8c_a3d3dff9e1eff0628d4963e8b8ef63697}\label{mssp_8c_a3d3dff9e1eff0628d4963e8b8ef63697}} 
+\index{mssp.\+c@{mssp.\+c}!i2c\+\_\+livre@{i2c\+\_\+livre}}
+\index{i2c\+\_\+livre@{i2c\+\_\+livre}!mssp.\+c@{mssp.\+c}}
+\subsubsection{\texorpdfstring{i2c\+\_\+livre()}{i2c\_livre()}}
+{\footnotesize\ttfamily char i2c\+\_\+livre (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mssp_8c_af04221651e46a48fa65913a257089067}\label{mssp_8c_af04221651e46a48fa65913a257089067}} 
+\index{mssp.\+c@{mssp.\+c}!i2c\+\_\+nack@{i2c\+\_\+nack}}
+\index{i2c\+\_\+nack@{i2c\+\_\+nack}!mssp.\+c@{mssp.\+c}}
+\subsubsection{\texorpdfstring{i2c\+\_\+nack()}{i2c\_nack()}}
+{\footnotesize\ttfamily void i2c\+\_\+nack (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mssp_8c_a95b403fb0dcb6b110f0025c7415c0fd0}\label{mssp_8c_a95b403fb0dcb6b110f0025c7415c0fd0}} 
+\index{mssp.\+c@{mssp.\+c}!i2c\+\_\+recebe@{i2c\+\_\+recebe}}
+\index{i2c\+\_\+recebe@{i2c\+\_\+recebe}!mssp.\+c@{mssp.\+c}}
+\subsubsection{\texorpdfstring{i2c\+\_\+recebe()}{i2c\_recebe()}}
+{\footnotesize\ttfamily char i2c\+\_\+recebe (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mssp_8c_a59441171802470d8d7077b40320feef0}\label{mssp_8c_a59441171802470d8d7077b40320feef0}} 
+\index{mssp.\+c@{mssp.\+c}!i2c\+\_\+restart@{i2c\+\_\+restart}}
+\index{i2c\+\_\+restart@{i2c\+\_\+restart}!mssp.\+c@{mssp.\+c}}
+\subsubsection{\texorpdfstring{i2c\+\_\+restart()}{i2c\_restart()}}
+{\footnotesize\ttfamily void i2c\+\_\+restart (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mssp_8c_a1fb5085b9096e9586e7f5f455c8b7254}\label{mssp_8c_a1fb5085b9096e9586e7f5f455c8b7254}} 
+\index{mssp.\+c@{mssp.\+c}!i2c\+\_\+send@{i2c\+\_\+send}}
+\index{i2c\+\_\+send@{i2c\+\_\+send}!mssp.\+c@{mssp.\+c}}
+\subsubsection{\texorpdfstring{i2c\+\_\+send()}{i2c\_send()}}
+{\footnotesize\ttfamily void i2c\+\_\+send (\begin{DoxyParamCaption}\item[{char}]{dado }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mssp_8c_af104fa2713ad2cfe4f993bdd2ec22c46}\label{mssp_8c_af104fa2713ad2cfe4f993bdd2ec22c46}} 
+\index{mssp.\+c@{mssp.\+c}!i2c\+\_\+start@{i2c\+\_\+start}}
+\index{i2c\+\_\+start@{i2c\+\_\+start}!mssp.\+c@{mssp.\+c}}
+\subsubsection{\texorpdfstring{i2c\+\_\+start()}{i2c\_start()}}
+{\footnotesize\ttfamily void i2c\+\_\+start (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mssp_8c_ad35d4e4f52ca74b503d5e5e1e0a3f5f3}\label{mssp_8c_ad35d4e4f52ca74b503d5e5e1e0a3f5f3}} 
+\index{mssp.\+c@{mssp.\+c}!i2c\+\_\+stop@{i2c\+\_\+stop}}
+\index{i2c\+\_\+stop@{i2c\+\_\+stop}!mssp.\+c@{mssp.\+c}}
+\subsubsection{\texorpdfstring{i2c\+\_\+stop()}{i2c\_stop()}}
+{\footnotesize\ttfamily void i2c\+\_\+stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mssp_8c_af4671d67e511f5d6aaf3517e87551085}\label{mssp_8c_af4671d67e511f5d6aaf3517e87551085}} 
+\index{mssp.\+c@{mssp.\+c}!i2c\+\_\+testa\+\_\+ack@{i2c\+\_\+testa\+\_\+ack}}
+\index{i2c\+\_\+testa\+\_\+ack@{i2c\+\_\+testa\+\_\+ack}!mssp.\+c@{mssp.\+c}}
+\subsubsection{\texorpdfstring{i2c\+\_\+testa\+\_\+ack()}{i2c\_testa\_ack()}}
+{\footnotesize\ttfamily char i2c\+\_\+testa\+\_\+ack (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mssp_8c_abc519c66aa9fa2e8bdc231db8f7d533f}\label{mssp_8c_abc519c66aa9fa2e8bdc231db8f7d533f}} 
+\index{mssp.\+c@{mssp.\+c}!master\+\_\+i2c@{master\+\_\+i2c}}
+\index{master\+\_\+i2c@{master\+\_\+i2c}!mssp.\+c@{mssp.\+c}}
+\subsubsection{\texorpdfstring{master\+\_\+i2c()}{master\_i2c()}}
+{\footnotesize\ttfamily void master\+\_\+i2c (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{mssp_8c_a678e2e2059baf3e6259855009878d6e0}\label{mssp_8c_a678e2e2059baf3e6259855009878d6e0}} 
+\index{mssp.\+c@{mssp.\+c}!master\+\_\+spi@{master\+\_\+spi}}
+\index{master\+\_\+spi@{master\+\_\+spi}!mssp.\+c@{mssp.\+c}}
+\subsubsection{\texorpdfstring{master\+\_\+spi()}{master\_spi()}}
+{\footnotesize\ttfamily void master\+\_\+spi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

@@ -77,11 +77,6 @@ void text_lcd(const uint8_t *str){
          }
 }
 
-/*! \brief Display number
-*
-* \param add address
-* \param data number to be displayed		
-*/
 void number_lcd(uint8_t add, uint8_t data){
     cmd_lcd(add);
     char_lcd((uint8_t)(data+LCD_CHAR_OFFSET));
