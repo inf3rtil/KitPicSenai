@@ -40,7 +40,9 @@
 void main(void) {
     init_pic();
     init_lcd();
-    text_lcd("testando");
+    text_lcd("      2019      ");
+    cmd_lcd(0xC0);
+    text_lcd("FernandoFerreira");
     while(1){
         
     }
